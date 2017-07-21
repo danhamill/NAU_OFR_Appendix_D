@@ -2,12 +2,19 @@
 
 
 %Change defult figure nemas fom Figure 1 to Figure ###L-D1
-\renewcommand{\thefigure}{003L---D\arabic{figure}}
-\setcounter{figure}{0}
+%\renewcommand{\thefigure}{003L---D\arabic{figure}}
+%\setcounter{figure}{0}
 
 %\renewcommand{\thetable}{003L---D\arabic{table}}
 %\setcounter{table}{0}
 
+\newcommand{\hbAppendixPrefix}{003L---D}
+%
+\renewcommand{\thefigure}{\hbAppendixPrefix\arabic{figure}}
+\setcounter{figure}{0}
+\renewcommand{\thetable}{\hbAppendixPrefix\arabic{table}} 
+\setcounter{table}{0}
+%\setlength{\tabcolsep}{0.2em}
 %Figure 3
 \begin{figure}[H]
 	\centering
@@ -65,13 +72,13 @@
 										&  (m{$^3$})&(m{$^3$})	& (m)			&(m{$^3$})	&	SBES   &     MBES 							&Record			\\
 									\midrule\endfirsthead
 									
-								    \multicolumn{2}{l}%
+								    \multicolumn{8}{l}%
 								    {{Table \thetable\ Continued from previous page}} \\
 									\toprule
 									& Formative	&Peak		&Water Surface	& 			&\multicolumn{2}{c}{Bathymetric}	&				\\
 									Date&  Discharge&Discharge	&Elevation		& Discharge	&\multicolumn{2}{c}{Survey}		&Photographic	\\
 									\cmidrule(r){6-7}	
-									&  (m{$^3$})&(m{$^3$})	& (m)			&(m{$^3$})	&	SBES   &     MBES 							&Record			\\ \toprule
+									&  (m{$^3$})&(m{$^3$})	& (m)			&(m{$^3$})	&	SBES   &     MBES 							&Record			\\ 
 									\midrule\endhead
 									}
 									},
