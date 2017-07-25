@@ -1,0 +1,21 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\begin{document}
+	\begin{table}
+		\pgfplotstabletypeset[col sep=&,
+		row sep=\\,
+		columns/a/.style={string type},
+		columns/c/.style={string type}]
+		{
+			a 		   &    b &  c    \\
+			1990-09-28 &  280 &  {$15 \pm 111$} \\ }	
+	\end{table}
+	
+\end{document}
