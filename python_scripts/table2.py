@@ -97,7 +97,7 @@ if __name__ =='_main__':
     files = glob(r"C:\workspace\sandbar_process\plotting_out\*\*_Merge_Site_Table.csv")
     tex_root = r"C:\workspace\NAU_OFR_Appendix_D"
     
-    for file in files[10:11]:
+    for file in files:
         
         #Get site code
         site = file.split('\\')[-2]
@@ -115,6 +115,9 @@ if __name__ =='_main__':
         
         df = latex_format_dataframe(df)
         oFile = out_root + os.sep + 'Table2.tex'
+        
+        if os.path.exists(oFile):
+            os.remove(oFile)
         write_tex(df,oFile)
 
 
