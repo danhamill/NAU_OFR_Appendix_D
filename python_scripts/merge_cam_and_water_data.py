@@ -129,8 +129,8 @@ if __name__ =='__main__':
             water = lf_data
         else:
             water = gc_data
-        df['Formative_Discharge'] = df.apply(lambda x: formative_discharge(x,lf_data),axis=1)
-        df['Peak_Discharge'] =  df.apply(lambda x: peak_discharge(x,lf_data),axis=1)
+        df['Formative_Discharge'] = df.apply(lambda x: formative_discharge(x,water),axis=1)
+        df['Peak_Discharge'] =  df.apply(lambda x: peak_discharge(x,water),axis=1)
         
         
         errors = get_errors(sheet,lu_error)
