@@ -124,6 +124,11 @@ if __name__ =='__main__':
         df = xl.parse(sheet,parse_cols="H:I,M").dropna()
         
         df['Photo_Record'] = df.apply(lambda x: populate_cam_col(x), axis=1)
+        
+        if int(sheet[0:-1])< 88:
+            water = lf_data
+        else:
+            water = gc_data
         df['Formative_Discharge'] = df.apply(lambda x: formative_discharge(x,lf_data),axis=1)
         df['Peak_Discharge'] =  df.apply(lambda x: peak_discharge(x,lf_data),axis=1)
         
